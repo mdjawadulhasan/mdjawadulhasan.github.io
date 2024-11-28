@@ -1,0 +1,90 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+/* Name title */
+.name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #2a2a2a;
+}
+
+/* Project titles */
+.papertitle {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+/* Links */
+a {
+    color: #1772d0;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #f09228;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Images */
+img {
+    border-radius: 5px;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .name {
+        font-size: 24px;
+    }
+    
+    table {
+        display: block;
+        width: 100%;
+    }
+    
+    td {
+        display: block;
+        width: 100% !important;
+        padding: 10px !important;
+    }
+    svg {
+        stroke: #1772d0;
+        transition: stroke 0.3s ease;
+        vertical-align: middle;
+    }
+    
+    a:hover svg {
+        stroke: #f09228;
+    }
+}
