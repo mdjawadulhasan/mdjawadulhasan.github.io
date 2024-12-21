@@ -18,11 +18,21 @@ body {
 }
 
 /* Project titles */
-.papertitle {
+
+.designation-title {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     color: #2a2a2a;
+}
+
+
+.papertitle {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2a2a2a;
+    font-style: italic;
 }
 
 /* Links */
