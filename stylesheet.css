@@ -556,3 +556,180 @@ img {
         page-break-inside: avoid;
     }
 }
+
+/* Research Publications */
+.research-item {
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.research-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1772d0;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.research-conference {
+    font-style: italic;
+    color: #666666;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.research-authors {
+    margin: 8px 0;
+    color: #2a2a2a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.author-highlight {
+    font-weight: 700;
+    color: #2a2a2a;
+}
+
+.research-description {
+    margin-top: 12px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #444444;
+}
+
+/* Media Queries for Research Section */
+@media only screen and (max-width: 768px) {
+    .research-title {
+        font-size: 16px;
+    }
+    
+    .research-conference {
+        font-size: 14px;
+    }
+    
+    .research-authors {
+        font-size: 13px;
+    }
+
+    .research-description {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .research-title {
+        font-size: 15px;
+    }
+    
+    .research-conference {
+        font-size: 13px;
+    }
+    
+    .research-description {
+        font-size: 13px;
+    }
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Technical Skills Section */
+.skills-section {
+    margin: 20px 0;
+}
+
+.skill-group {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.skill-label {
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-right: 8px;
+}
+
+.skill-items {
+    color: #444444;
+}
+
+/* Projects Section */
+.project-item {
+    margin: 25px 0;
+}
+
+.project-header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.project-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1772d0;
+}
+
+.project-date {
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Achievements Section */
+.achievements-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.achievements-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #444444;
+}
+
+.achievements-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1772d0;
+}
+
+/* Update existing media queries */
+@media only screen and (max-width: 768px) {
+    .skill-group {
+        margin: 12px 0;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .project-name {
+        font-size: 16px;
+    }
+    
+    .achievements-list li {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .skill-group {
+        margin: 10px 0;
+    }
+    
+    .project-name {
+        font-size: 15px;
+    }
+    
+    .achievements-list li {
+        font-size: 13px;
+    }
+}
