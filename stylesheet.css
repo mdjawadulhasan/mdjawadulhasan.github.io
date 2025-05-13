@@ -6,6 +6,41 @@ body {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 14px;
     background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-width: 1024px;
+    overflow-x: auto;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #2a2a2a;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f09228;
 }
 
 /* Name title */
@@ -13,8 +48,80 @@ body {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 32px;
     font-weight: 700;
-    margin: 0;
+    margin: 5px 0 0 0;
     color: #2a2a2a;
+}
+
+/* Title below name */
+.title {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    margin: 5px 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+/* Social links below photo */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #1772d0;
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+    stroke: #1772d0;
+    transition: stroke 0.3s ease;
+}
+
+.social-link:hover svg {
+    stroke: white;
+}
+
+/* Contact links section */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1772d0;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #f09228;
+}
+
+.contact-link svg {
+    transition: stroke 0.3s ease;
+}
+
+.contact-link:hover svg {
+    stroke: #f09228;
 }
 
 /* Project titles */
@@ -96,5 +203,356 @@ img {
     
     a:hover svg {
         stroke: #f09228;
+    }
+}
+
+/* Education section */
+.education-item {
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.education-header h3 {
+    margin: 0;
+    color: #2a2a2a;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.education-date {
+    color: #666666;
+    font-size: 14px;
+}
+
+.education-degree {
+    font-size: 16px;
+    color: #1772d0;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.education-grade {
+    font-size: 15px;
+    color: #2a2a2a;
+    margin: 10px 0;
+}
+
+.education-courses {
+    margin-top: 20px;
+}
+
+.education-courses h4 {
+    color: #2a2a2a;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.education-courses ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.education-courses li {
+    color: #444444;
+    line-height: 1.6;
+}
+
+/* Bio text */
+.bio-text {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+.bio-text a {
+    display: inline;
+}
+
+/* Professional Experience */
+.experience-item {
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.experience-company {
+    margin: 0;
+}
+
+.experience-company h3 {
+    margin: 0;
+    color: #2a2a2a;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.experience-company p {
+    color: #666666;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.experience-date {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.project-title {
+    color: #1772d0;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 20px 0 15px 0;
+}
+
+.experience-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444444;
+}
+
+.experience-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1772d0;
+}
+
+.skills-used {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    color: #666666;
+    font-size: 14px;
+}
+
+.skills-used strong {
+    color: #2a2a2a;
+}
+
+/* Make the page responsive */
+@media only screen and (max-width: 768px) {
+    /* General layout */
+    body {
+        padding: 10px;
+    }
+
+    /* Name and title */
+    .name {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    /* Layout adjustments */
+    table {
+        width: 100% !important;
+    }
+
+    td {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    /* Photo and social links */
+    img {
+        width: 60% !important;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        margin: 15px 0;
+    }
+
+    /* Contact links */
+    .contact-links {
+        margin: 15px 0;
+    }
+
+    .contact-link {
+        font-size: 13px;
+    }
+
+    /* Experience section */
+    .experience-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .experience-date {
+        margin-top: 5px;
+    }
+
+    .project-title {
+        font-size: 16px;
+        margin: 15px 0 10px 0;
+    }
+
+    .experience-list li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .skills-used {
+        font-size: 13px;
+    }
+
+    /* Education section */
+    .education-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .education-header h3 {
+        font-size: 18px;
+    }
+
+    .education-date {
+        margin-top: 5px;
+    }
+
+    .education-degree {
+        font-size: 15px;
+    }
+
+    .education-grade {
+        font-size: 14px;
+    }
+
+    .education-courses ul {
+        grid-template-columns: 1fr;
+    }
+
+    .education-courses li {
+        font-size: 14px;
+    }
+}
+
+/* For very small screens */
+@media only screen and (max-width: 480px) {
+    .name {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 13px;
+    }
+
+    img {
+        width: 80% !important;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 5px 0;
+    }
+
+    .contact-links {
+        gap: 8px;
+    }
+
+    .contact-link span {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .experience-company h3 {
+        font-size: 18px;
+    }
+
+    .project-title {
+        font-size: 15px;
+    }
+
+    .experience-list li {
+        font-size: 13px;
+    }
+
+    .skills-used {
+        font-size: 12px;
+    }
+}
+
+/* For tablets and medium screens */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    img {
+        width: 80% !important;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .experience-list li {
+        font-size: 14px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar {
+        display: none;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2a2a2a;
+    }
+
+    .social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .experience-item, .education-item {
+        page-break-inside: avoid;
     }
 }
