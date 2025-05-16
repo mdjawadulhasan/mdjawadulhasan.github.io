@@ -8,8 +8,8 @@ body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    min-width: 1024px;
     overflow-x: auto;
+    width: 100%;
 }
 
 /* Navigation */
@@ -20,6 +20,7 @@ body {
     top: 0;
     z-index: 1000;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .nav-links {
@@ -29,6 +30,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -37,6 +39,8 @@ body {
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    padding: 5px 10px;
 }
 
 .nav-links a:hover {
@@ -210,17 +214,19 @@ img {
 .education-item {
     padding: 20px 0;
     margin: 20px 0;
+    width: 100%;
 }
 
 .education-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .education-header h3 {
-    margin: 0;
+    margin: 0 0 5px 0;
     color: #2a2a2a;
     font-size: 20px;
     font-weight: 700;
@@ -229,6 +235,7 @@ img {
 .education-date {
     color: #666666;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .education-degree {
@@ -356,6 +363,50 @@ img {
 
 /* Make the page responsive */
 @media only screen and (max-width: 768px) {
+    /* Force desktop-like view but scrollable */
+    body {
+        min-width: 1024px;
+        overflow-x: auto;
+        -webkit-text-size-adjust: 100%;
+    }
+    
+    /* Ensure navbar stays full width */
+    .navbar {
+        width: 100%;
+        min-width: 1024px;
+    }
+    
+    .nav-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* Keep education section formatting intact */
+    .education-header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    
+    /* Reset any mobile-specific changes */
+    td {
+        display: table-cell !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+    
+    /* Maintain table structure */
+    table {
+        display: table !important;
+    }
+    
+    /* Ensure the entire desktop view is preserved */
+    .education-courses ul {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
     /* General layout */
     body {
         padding: 10px;
@@ -456,8 +507,22 @@ img {
     }
 }
 
-/* For very small screens */
+/* For very small screens - still maintain desktop view */
 @media only screen and (max-width: 480px) {
+    body {
+        min-width: 1024px;
+    }
+    
+    .navbar {
+        min-width: 1024px;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
     .name {
         font-size: 24px;
     }
@@ -468,16 +533,6 @@ img {
 
     img {
         width: 80% !important;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    .nav-links a {
-        padding: 5px 0;
     }
 
     .contact-links {
@@ -512,23 +567,7 @@ img {
 /* For tablets and medium screens */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     body {
-        padding: 15px;
-    }
-
-    .name {
-        font-size: 30px;
-    }
-
-    img {
-        width: 80% !important;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .experience-list li {
-        font-size: 14px;
+        min-width: 1024px;
     }
 }
 
