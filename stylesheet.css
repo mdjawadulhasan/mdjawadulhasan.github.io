@@ -739,6 +739,28 @@ html {
     color: #1772d0;
 }
 
+/* Academic Projects Section */
+.project-subtitle {
+    font-style: italic;
+    color: #666666;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.project-link {
+    margin: 5px 0 10px 0;
+}
+
+.project-link a {
+    color: #1772d0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.project-link a:hover {
+    color: #f09228;
+}
+
 /* Update existing media queries */
 @media only screen and (max-width: 768px) {
     .skill-group {
