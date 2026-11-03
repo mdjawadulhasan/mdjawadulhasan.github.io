@@ -151,6 +151,9 @@ summary:hover { color:var(--ink); }
 .recognition-list h3 { font-size:14px; font-weight:700; }
 .recognition-list p { color:var(--muted); font-size:12px; margin-top:5px; }
 .recognition-list .eyebrow { margin-left:auto; font-size:12px; }
+.certification-item h3 { font-size:18px; line-height:1.5; }
+.certification-issuer { margin-top:7px; font-size:14px; color:var(--muted); }
+.certification-link { display:inline-block; margin-top:12px; font-size:14px; text-decoration:underline; text-underline-offset:4px; }
 .skill-group { display:grid; grid-template-columns:210px minmax(0,1fr); gap:20px; padding:13px 0; border-bottom:1px solid var(--line); font-size:14px; }
 .skill-group:last-child { border:0; }
 .skill-label { display:flex; align-items:center; gap:10px; font-weight:600; }
