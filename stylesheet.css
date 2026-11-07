@@ -42,7 +42,8 @@ img { display:block; max-width:100%; }
 .site-nav a[aria-current]::before { content:''; position:absolute; left:-17px; top:13px; width:5px; height:5px; border-radius:50%; background:var(--ink); }
 .sidebar-contact { display:flex; flex-direction:column; gap:10px; margin-top:28px; font-size:14px; }
 .sidebar-contact .contact-row { display:grid; grid-template-columns:80px 1fr; gap:16px; }
-.sidebar-contact a { font-weight:400; }
+.sidebar-contact a { font-weight:400; overflow-wrap:anywhere; }
+.sidebar-contact .contact-label { color:var(--muted); }
 .sidebar-contact .cv-link { font-weight:700; }
 .sidebar-note { margin-top:20px; padding-top:0; font-size:12px; line-height:1.9; color:var(--muted); font-family:var(--sans); }
 .menu-toggle { display:none; }
