@@ -53,3 +53,31 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', updateCurrentSection);
 window.addEventListener('load', updateCurrentSection);
 updateCurrentSection();
+
+// Open project images full size in a pop-up; click anywhere or press Escape to close.
+const lightbox = document.querySelector('.lightbox');
+const lightboxImage = lightbox.querySelector('img');
+let lightboxOpener = null;
+function openLightbox(image) {
+  lightboxOpener = image;
+  lightboxImage.src = image.currentSrc || image.src;
+  lightboxImage.alt = image.alt;
+  lightbox.showModal();
+}
+document.querySelectorAll('.project-image img').forEach(image => {
+  image.tabIndex = 0;
+  image.setAttribute('role', 'button');
+  image.setAttribute('aria-label', `View full size: ${image.alt}`);
+  image.addEventListener('click', () => openLightbox(image));
+  image.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openLightbox(image);
+    }
+  });
+});
+lightbox.addEventListener('click', () => lightbox.close());
+lightbox.addEventListener('close', () => {
+  lightboxImage.removeAttribute('src');
+  if (lightboxOpener) lightboxOpener.focus();
+});
