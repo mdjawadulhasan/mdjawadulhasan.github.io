@@ -94,6 +94,7 @@ summary:hover { color:var(--ink); }
 .project-header { display:flex; flex-direction:column; gap:7px; }
 .project-name { font-size:16px; }
 .project-link { font-size:13px; margin-top:9px; text-decoration:underline; text-underline-offset:4px; }
+.project-link-top { margin-top:0; font-family:var(--sans); font-size:12px; }
 .research-item { padding:22px 0; border-bottom:1px solid var(--line); }
 .research-item:first-child { padding-top:0; }
 .research-item:last-child { padding-bottom:0; border:0; }
@@ -135,7 +136,7 @@ summary:hover { color:var(--ink); }
 .experience-company p + p { font-size:12px; }
 .experience-date { display:block; font-family:var(--sans); font-size:12px; color:var(--muted); margin-top:15px; }
 .experience-item > .experience-list { margin-top:0; }
-.awards-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+.awards-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
 .award-top { color:var(--muted); }
 .award-top > span:last-child { display:none; }
 .award-card h3 { font-family:var(--heading); font-size:42px; font-weight:700; letter-spacing:-1px; margin-top:12px; }
@@ -163,12 +164,15 @@ summary:hover { color:var(--ink); }
 .contact-section > p:not(.eyebrow) { font-size:14px; color:var(--muted); margin-top:10px; }
 .contact-address { display:inline-block; font-size:14px; text-decoration:underline; text-underline-offset:5px; margin-top:20px; overflow-wrap:anywhere; }
 .site-footer { display:flex; justify-content:space-between; border-top:1px solid var(--line); padding-top:20px; font-size:12px; color:var(--muted); margin-top:20px; }
+.last-updated { text-align:center; font-family:var(--sans); font-size:11px; color:var(--muted); margin-top:18px; }
 
 .programme-label { font-size:15px; letter-spacing:0; }
 .availability-note { display:flex; align-items:flex-start; gap:10px; margin-top:16px; font-family:var(--heading); font-size:15px; font-weight:700; letter-spacing:-.02em; }
 .availability-note svg { width:19px; height:19px; flex-shrink:0; margin-top:3px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
 .research-explanation { margin-top:14px; font-size:15px; line-height:1.75; color:var(--muted); }
 .research-explanation p + p { margin-top:10px; }
+.research-focus > .research-supervisor { margin-top:14px; font-size:18px; line-height:1.6; color:var(--muted); }
+.research-supervisor a { color:var(--ink); font-weight:500; }
 
 
 .skill-cards { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
@@ -189,6 +193,7 @@ summary:hover { color:var(--ink); }
 @media(max-width:1100px) { .portfolio-shell { grid-template-columns:200px minmax(0,1fr); gap:60px; padding-inline:35px; } .project-card { grid-template-columns:160px minmax(0,1fr); gap:20px; } .card-topline { flex-wrap:wrap; gap:5px; } .experience-item { grid-template-columns:160px 1fr; gap:25px; } }
 @media(max-height:840px) and (min-width:761px) { .profile-sidebar { position:static; } }
 @media(max-width:760px) {
+ .awards-grid { grid-template-columns:1fr; gap:25px; }
  html { scroll-padding-top:25px; }
  .portfolio-shell { display:block; padding:24px; max-width:650px; }
  .profile-sidebar { position:static; height:auto; max-height:none; overflow:visible; padding-bottom:25px; border-bottom:1px solid var(--line); }
