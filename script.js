@@ -3,18 +3,20 @@ document.documentElement.classList.add('js');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
 const navigationLinks = [...navigation.querySelectorAll('a')];
+const menuCurrent = menuButton.querySelector('.menu-current');
 
 function closeMenu() {
   menuButton.setAttribute('aria-expanded', 'false');
   navigation.classList.remove('is-open');
-  menuButton.querySelector('span').textContent = '+';
 }
 
 menuButton.addEventListener('click', () => {
   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isExpanded));
   navigation.classList.toggle('is-open', !isExpanded);
-  menuButton.querySelector('span').textContent = isExpanded ? '+' : '−';
+});
+document.addEventListener('click', event => {
+  if (menuButton.getAttribute('aria-expanded') === 'true' && !menuButton.contains(event.target) && !navigation.contains(event.target)) closeMenu();
 });
 navigationLinks.forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => {
@@ -35,6 +37,7 @@ function updateCurrentSection() {
   });
   navigationLinks.forEach(link => {
     if (link.getAttribute('href') === `#${currentId}`) {
+      menuCurrent.textContent = link.textContent;
       link.setAttribute('aria-current', 'location');
     } else {
       link.removeAttribute('aria-current');
