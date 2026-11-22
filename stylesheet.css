@@ -234,7 +234,9 @@ summary:hover { color:var(--ink); }
  .recognition-list .eyebrow { display:none; }
 }
 @media(max-width:480px) {
- .portfolio-shell { padding:20px; }
+ .portfolio-shell { padding:76px 20px 20px; }
+ .js .menu-toggle { padding:0 20px; }
+ .js .site-nav { padding:6px 20px 14px; }
  h1 { font-size:33px; }
  .project-card { grid-template-columns:1fr; gap:17px; }
  .project-image { min-height:0; padding:22px; }
